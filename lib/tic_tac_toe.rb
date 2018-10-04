@@ -100,10 +100,11 @@ def current_player(board)
     return 'O'
   end
 end
-=begin
+
 # Define your play method below
 def play(board)
-  if over?(board)
+  if won?(board)
+    puts "Congratualtions! {} won!".format(
+      over?(board)
     
 end
-=end
