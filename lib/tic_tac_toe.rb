@@ -104,12 +104,15 @@ end
 # Define your play method below
 def play(board)
   until over?(board) do
-    if won?(board)
-      puts "Congratulations #{current_player(board)}!"
-    elsif draw?(board)
-      puts "Cat's Game!"
-    else
-      turn(board)
-    end
+    turn(board)
+  end
+    
+  if won?(board)
+    puts "Congratulations #{current_player(board)}!"
+  elsif draw?(board)
+    puts "Cat's Game!"
+  else
+    turn(board)
+  end
   end
 end
