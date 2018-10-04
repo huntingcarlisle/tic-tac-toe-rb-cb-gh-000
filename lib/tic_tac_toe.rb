@@ -76,12 +76,31 @@ def turn(board)
   input = gets.strip
   index = input_to_index(input)
   if valid_move?(board, index)
-    move(board, index, current_player)
+    move(board, index, current_player(board))
     display_board(board)
   else
     turn(board)
   end
 end
+
+def turn_count(board)
+  counter = 0
+  board.each do |move|
+    if move == 'X' or move == 'O'
+      counter += 1
+    end
+  end
+  return counter
+end
+
+def current_player(board)
+  if turn_count(board) % 2 == 0
+    return 'X'
+  else
+    return 'O'
+  end
+end
+
 =begin
 # Define your play method below
 def play(board)
