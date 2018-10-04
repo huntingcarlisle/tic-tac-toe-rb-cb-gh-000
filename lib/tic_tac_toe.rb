@@ -114,6 +114,5 @@ def play(board)
   until over?(board) do
     turn(board)
   end
-  end_message(board) 
-
+  end_message(board)
 end
