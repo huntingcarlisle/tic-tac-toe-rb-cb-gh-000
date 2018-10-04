@@ -82,7 +82,7 @@ def turn(board)
     turn(board)
   end
 end
-=end
+
 # Define your play method below
 def play(board)
   validMoves = 0
@@ -91,3 +91,5 @@ def play(board)
     validMoves += 1
   end
 end
+
+=end
