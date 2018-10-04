@@ -101,7 +101,6 @@ def current_player(board)
   end
 end
 
-=begin
 # Define your play method below
 def play(board)
   validMoves = 0
@@ -110,5 +109,3 @@ def play(board)
     validMoves += 1
   end
 end
-
-=end
