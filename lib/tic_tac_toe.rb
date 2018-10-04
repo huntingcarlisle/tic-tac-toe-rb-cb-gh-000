@@ -103,12 +103,12 @@ end
 
 # Define your play method below
 def play(board)
-  
-  if won?(board)
-    puts "Congratualtions! #{current_player(board)} won!"
-  elsif draw?(board)
-    puts "Better luck next time---it was a draw!"
-  else
-    turn(board)
-  end
+  until over?(board) do
+    if won?(board)
+      puts "Congratualtions! #{current_player(board)} won!"
+    elsif draw?(board)
+      puts "Better luck next time---it was a draw!"
+    else
+      turn(board)
+    end
 end
