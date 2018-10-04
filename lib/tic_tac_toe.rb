@@ -37,7 +37,7 @@ end
 
 def over?(board)
   # if board won or is a draw or is full, returns true
-  return won?(board) || draw?(board) || full?(board)
+  return won?(board) || draw?(board)
 end
 
 def winner(board)
@@ -100,12 +100,10 @@ def current_player(board)
     return 'O'
   end
 end
-
+=begin
 # Define your play method below
 def play(board)
-  validMoves = 0
-  until validMoves == 9
-    turn(board)
-    validMoves += 1
-  end
+  if over?(board)
+    
 end
+=end
